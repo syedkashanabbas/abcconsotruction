@@ -13,48 +13,50 @@
 <body class="text-white font-sans overflow-x-hidden">
 
   <!-- NAVBAR -->
-  <header class="fixed top-0 w-full bg-black/60 backdrop-blur-md z-50">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+<!-- NAVBAR -->
+<header class="fixed top-4 left-0 right-0 z-50 flex justify-center">
+  <div class="max-w-7xl w-full mx-auto bg-[#0a1f44] text-white rounded-md shadow-lg px-6 py-3 flex items-center justify-between">
 
-      <!-- Left Nav -->
-      <nav class="flex items-center space-x-6 text-sm font-semibold">
-        <div class="relative group">
-          <button class="hover:text-[#b22222]">About ▾</button>
-          <div class="absolute hidden group-hover:block bg-white text-black shadow-lg mt-2 py-2 w-40">
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Company</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Team</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">History</a>
-          </div>
+    <!-- Left Nav -->
+    <nav class="flex items-center space-x-6 text-sm font-semibold">
+      <div class="relative group">
+        <button class="hover:text-[#b22222]">About ▾</button>
+        <div class="absolute hidden group-hover:block bg-white text-black shadow-lg mt-2 py-2 w-40">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Company</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Team</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">History</a>
         </div>
-        <div class="relative group">
-          <button class="hover:text-[#b22222]">Careers ▾</button>
-          <div class="absolute hidden group-hover:block bg-white text-black shadow-lg mt-2 py-2 w-40">
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Open Roles</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Internships</a>
-          </div>
-        </div>
-      </nav>
-
-      <!-- Center Logo -->
-      <div class="text-white font-bold tracking-wide border-2 px-3 py-1 border-white">
-        ABC Construction
       </div>
+      <div class="relative group">
+        <button class="hover:text-[#b22222]">Careers ▾</button>
+        <div class="absolute hidden group-hover:block bg-white text-black shadow-lg mt-2 py-2 w-40">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Open Roles</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Internships</a>
+        </div>
+      </div>
+    </nav>
 
-      <!-- Right Nav -->
-      <nav class="flex items-center space-x-6 text-sm font-semibold">
-        <a href="#" class="hover:text-[#b22222]">Projects</a>
-        <a href="#" class="hover:text-[#b22222]">Sectors</a>
-        <button class="hover:text-[#b22222]">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" 
-               viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" 
-                  stroke-width="2" 
-                  d="M21 21l-4.35-4.35M17 10a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
-        </button>
-      </nav>
+    <!-- Center Logo -->
+    <div class="text-white font-bold tracking-wide border-2 px-3 py-1 border-white">
+      ABC Construction
     </div>
-  </header>
+
+    <!-- Right Nav -->
+    <nav class="flex items-center space-x-6 text-sm font-semibold">
+      <a href="#" class="hover:text-[#b22222]">Projects</a>
+      <a href="#" class="hover:text-[#b22222]">Sectors</a>
+      <button class="hover:text-[#b22222]">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" 
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" 
+                stroke-width="2" 
+                d="M21 21l-4.35-4.35M17 10a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
 
   <!-- HERO SECTION -->
   <section class="relative h-screen w-full flex items-center justify-start">
@@ -65,17 +67,18 @@
            class="w-full h-full object-cover">
     </div>
 
-    <!-- Hero Content -->
+
     <div class="relative z-20 max-w-5xl px-8 lg:px-16">
 
- <h1 class="text-5xl sm:text-7xl lg:text-9xl font-extrabold leading-tight tracking-tight mb-6" 
-     data-aos="fade-up" data-aos-delay="400">
-  Building the Future,<br>
-  One Project at a Time
-</h1>
 
-      
-    </div>
+  <!-- Main Cinematic Text -->
+  <h1 class="relative text-5xl sm:text-7xl lg:text-9xl font-extrabold leading-tight tracking-tight mb-6 "       data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="1500">
+    Building the Future,<br>
+    <span class="text-[#b22222]" data-aos="fade-right" data-aos-delay="700">
+      One Project at a Time
+    </span>
+  </h1>
+</div>
   </section>
 
   <!-- PARTNERS SECTION -->
