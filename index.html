@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Construction Company</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    .split-bg {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  </style>
+</head>
+<body class="text-white font-sans overflow-x-hidden">
+
+  <!-- HERO SECTION -->
+  <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <!-- Background split -->
+    <div class="absolute inset-0 split-bg">
+      <div class="bg-black"></div>
+      <div class="bg-white"></div>
+    </div>
+
+    <!-- Big Text -->
+    <div class="absolute inset-0 flex items-center justify-center z-20">
+      <h1 class="text-[12vw] font-bold leading-none flex items-center">
+        <span class="text-white">Build</span>
+        <span class="text-black">The Best</span>
+      </h1>
+    </div>
+
+    <!-- Center Image (exactly centered) -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[30%] z-10">
+      <img src="https://cdn.prod.website-files.com/679d0dba9dd9f96b027fa3d8/679d417bc5d7efb071bb5698_Frame%201.webp" 
+           alt="Building" 
+           class="w-[80vw] max-w-[900px] opacity-100">
+    </div>
+
+    <!-- Socials Left -->
+    <div class="absolute bottom-10 left-10 text-sm space-y-2 z-30">
+      <a href="#" class="block text-white hover:underline">Instagram</a>
+      <a href="#" class="block text-white hover:underline">LinkedIn</a>
+      <a href="#" class="block text-white hover:underline">Twitter</a>
+    </div>
+
+    <!-- Contact Right -->
+    <div class="absolute bottom-10 right-10 text-sm space-y-2 z-30">
+      <p class="text-black">Location</p>
+      <p class="text-black">Phone</p>
+      <p class="text-black">Contact</p>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true,
+    });
+  </script>
+</body>
+</html>
