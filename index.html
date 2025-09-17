@@ -140,15 +140,14 @@
 </section>
 
 <section id="services" class="w-full h-screen bg-white">
-  <div class="max-w-7xl mx-auto px-6 lg:px-12 py-16">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 py-16 flex flex-col">
     <!-- Heading -->
     <div class="mb-12">
       <p class="uppercase text-xs tracking-wider text-gray-500 font-semibold">
         What We Do
       </p>
-      
       <h2 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-black leading-tight mb-10">
-         We have a vision for the future of construction.
+        We have a vision for the future of construction.
       </h2>
     </div>
 
@@ -162,53 +161,143 @@
 
     <!-- Tab Contents -->
     <div class="relative w-full h-[65vh] overflow-hidden">
+      
       <!-- Buildings -->
       <div class="tab-content active absolute inset-0 flex flex-col lg:flex-row gap-10 items-center">
         <div class="w-full lg:w-1/2 h-full">
-          <img src="assets/img/property1.jpg" class="w-full h-full object-cover rounded-md shadow-lg">
+          <img src="https://picsum.photos/1000/700?random=10" class="w-full h-full object-cover rounded-md shadow-lg">
         </div>
-        <div class="w-full lg:w-1/2">
-          <h3 class="text-2xl font-bold mb-4">Stunning structures, sustainably built</h3>
-          <p class="text-gray-700 mb-6">Our professionals bring value to every educational, institutional, residential and commercial project.</p>
-          <a href="#" class="text-[#b22222] font-semibold hover:underline">Learn More →</a>
+        <div class="w-full lg:w-1/2 pr-6">
+          <h3 class="text-3xl font-bold mb-4">Stunning structures, sustainably built</h3>
+          <p class="text-gray-700 mb-6">
+            From skyscrapers to campuses, we deliver architectural marvels that combine functionality with sustainability. 
+            Our mission is to create spaces that inspire communities while minimizing environmental impact.
+          </p>
+
+          <!-- Features -->
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <svg class="w-6 h-6 text-[#b22222] flex-shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <div>
+                <h4 class="text-lg font-semibold text-gray-900">Green Building Standards</h4>
+                <p class="text-gray-600 text-sm">We use eco-certified materials and adhere to LEED practices.</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <svg class="w-6 h-6 text-[#b22222] flex-shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <div>
+                <h4 class="text-lg font-semibold text-gray-900">150+ Completed Projects</h4>
+                <p class="text-gray-600 text-sm">Our track record spans commercial, residential, and institutional builds.</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <svg class="w-6 h-6 text-[#b22222] flex-shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <div>
+                <h4 class="text-lg font-semibold text-gray-900">Trusted Global Clients</h4>
+                <p class="text-gray-600 text-sm">We work with Fortune 500 companies and governments worldwide.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <a href="#" class="inline-block mt-8 text-[#b22222] font-semibold hover:underline">
+            Learn More →
+          </a>
         </div>
       </div>
 
       <!-- Civil -->
       <div class="tab-content absolute inset-0 hidden flex-col lg:flex-row gap-10 items-center">
         <div class="w-full lg:w-1/2 h-full">
-          <img src="assets/img/property2.jpg" class="w-full h-full object-cover rounded-md shadow-lg">
+          <img src="https://picsum.photos/1000/700?random=11" class="w-full h-full object-cover rounded-md shadow-lg">
         </div>
-        <div class="w-full lg:w-1/2">
-          <h3 class="text-2xl font-bold mb-4">Strong Civil Infrastructure</h3>
-          <p class="text-gray-700 mb-6">From bridges to highways, we ensure safe, reliable, and future-ready infrastructure.</p>
-          <a href="#" class="text-[#b22222] font-semibold hover:underline">Learn More →</a>
+        <div class="w-full lg:w-1/2 pr-6">
+          <h3 class="text-3xl font-bold mb-4">Strong Civil Infrastructure</h3>
+          <p class="text-gray-700 mb-6">From bridges to highways, we deliver infrastructure that connects nations, 
+            supports economies, and stands the test of time.</p>
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <svg class="w-6 h-6 text-[#b22222] flex-shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <div>
+                <h4 class="text-lg font-semibold text-gray-900">Bridge Engineering</h4>
+                <p class="text-gray-600 text-sm">Safely spanning cities and rivers with innovation.</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <svg class="w-6 h-6 text-[#b22222] flex-shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <div>
+                <h4 class="text-lg font-semibold text-gray-900">Highway Systems</h4>
+                <p class="text-gray-600 text-sm">Future-ready networks for urban mobility and commerce.</p>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="inline-block mt-8 text-[#b22222] font-semibold hover:underline">Learn More →</a>
         </div>
       </div>
 
       <!-- Industrial -->
       <div class="tab-content absolute inset-0 hidden flex-col lg:flex-row gap-10 items-center">
         <div class="w-full lg:w-1/2 h-full">
-          <img src="assets/img/property3.jpg" class="w-full h-full object-cover rounded-md shadow-lg">
+          <img src="https://picsum.photos/1000/700?random=12" class="w-full h-full object-cover rounded-md shadow-lg">
         </div>
-        <div class="w-full lg:w-1/2">
-          <h3 class="text-2xl font-bold mb-4">Heavy Industrial Expertise</h3>
-          <p class="text-gray-700 mb-6">We handle complex industrial projects with precision and unmatched capability.</p>
-          <a href="#" class="text-[#b22222] font-semibold hover:underline">Learn More →</a>
+        <div class="w-full lg:w-1/2 pr-6">
+          <h3 class="text-3xl font-bold mb-4">Heavy Industrial Expertise</h3>
+          <p class="text-gray-700 mb-6">Factories, plants, and industrial facilities engineered for efficiency and scale.</p>
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <svg class="w-6 h-6 text-[#b22222] flex-shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <div>
+                <h4 class="text-lg font-semibold text-gray-900">Advanced Machinery</h4>
+                <p class="text-gray-600 text-sm">Equipped to handle the largest and most complex projects.</p>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="inline-block mt-8 text-[#b22222] font-semibold hover:underline">Learn More →</a>
         </div>
       </div>
 
       <!-- Special -->
       <div class="tab-content absolute inset-0 hidden flex-col lg:flex-row gap-10 items-center">
         <div class="w-full lg:w-1/2 h-full">
-          <img src="assets/img/property4.jpg" class="w-full h-full object-cover rounded-md shadow-lg">
+          <img src="https://picsum.photos/1000/700?random=13" class="w-full h-full object-cover rounded-md shadow-lg">
         </div>
-        <div class="w-full lg:w-1/2">
-          <h3 class="text-2xl font-bold mb-4">Special Projects with Impact</h3>
-          <p class="text-gray-700 mb-6">Unique, high-profile projects that demand creativity, expertise, and perfection.</p>
-          <a href="#" class="text-[#b22222] font-semibold hover:underline">Learn More →</a>
+        <div class="w-full lg:w-1/2 pr-6">
+          <h3 class="text-3xl font-bold mb-4">Special Projects with Impact</h3>
+          <p class="text-gray-700 mb-6">High-profile, unique, and visionary projects that set benchmarks in the industry.</p>
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <svg class="w-6 h-6 text-[#b22222] flex-shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <div>
+                <h4 class="text-lg font-semibold text-gray-900">Iconic Landmarks</h4>
+                <p class="text-gray-600 text-sm">Projects that redefine skylines and inspire generations.</p>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="inline-block mt-8 text-[#b22222] font-semibold hover:underline">Learn More →</a>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -216,6 +305,7 @@
 
   <!-- AOS SCRIPT -->
    <script src="./assets/js/tabs.js"></script>
+   <script src="./assets/js/storyslider.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   
   <script>
