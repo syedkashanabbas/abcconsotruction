@@ -132,7 +132,7 @@
   </div>
 </section>
 
-<section id="services" class="w-full h-screen bg-white">
+<section id="services" class="w-full h-screen bg-white mb-20">
   <div class="max-w-7xl mx-auto px-6 lg:px-12 py-16 flex flex-col">
     <!-- Heading -->
     <div class="mb-12">
@@ -294,6 +294,67 @@
     </div>
   </div>
 </section>
+
+<section class="relative w-full bg-[#111] py-28 overflow-hidden">
+  <div class="text-center mb-20">
+    <h2 class="text-5xl md:text-6xl font-extrabold tracking-wide text-white">OUR STORY</h2>
+    <p class="mt-8 max-w-4xl mx-auto text-gray-300 text-lg">
+      Our journey began decades ago, and each milestone shaped the company we are today.
+    </p>
+  </div>
+
+  <!-- Slider Wrapper -->
+  <div class="relative max-w-[1600px] mx-auto px-6">
+    <!-- Slides Container -->
+    <div id="story-slider" class="flex items-center justify-center gap-12 transition-transform duration-500">
+      <!-- Cards -->
+      <div class="story-card relative bg-black rounded-2xl overflow-hidden flex-shrink-0 w-[22rem] h-[22rem] transform transition-all duration-500">
+        <img src="https://picsum.photos/700/700?random=1" class="w-full h-full object-cover opacity-70">
+        <div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
+          <h3 class="text-3xl font-bold">1900</h3>
+          <p class="text-base text-gray-300">Our first project sets the foundation.</p>
+        </div>
+      </div>
+      <div class="story-card relative bg-black rounded-2xl overflow-hidden flex-shrink-0 w-[22rem] h-[22rem] transform transition-all duration-500">
+        <img src="https://picsum.photos/700/700?random=2" class="w-full h-full object-cover opacity-70">
+        <div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
+          <h3 class="text-3xl font-bold">1924</h3>
+          <p class="text-base text-gray-300">Awarded our first $1M contract.</p>
+        </div>
+      </div>
+      <div class="story-card relative bg-black rounded-2xl overflow-hidden flex-shrink-0 w-[22rem] h-[22rem] transform transition-all duration-500">
+        <img src="https://picsum.photos/700/700?random=3" class="w-full h-full object-cover opacity-70">
+        <div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
+          <h3 class="text-3xl font-bold">1931</h3>
+          <p class="text-base text-gray-300">Leadership change fuels growth.</p>
+        </div>
+      </div>
+      <div class="story-card relative bg-black rounded-2xl overflow-hidden flex-shrink-0 w-[22rem] h-[22rem] transform transition-all duration-500">
+        <img src="https://picsum.photos/700/700?random=4" class="w-full h-full object-cover opacity-70">
+        <div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
+          <h3 class="text-3xl font-bold">1950</h3>
+          <p class="text-base text-gray-300">Global expansion begins.</p>
+        </div>
+      </div>
+      <div class="story-card relative bg-black rounded-2xl overflow-hidden flex-shrink-0 w-[22rem] h-[22rem] transform transition-all duration-500">
+        <img src="https://picsum.photos/700/700?random=5" class="w-full h-full object-cover opacity-70">
+        <div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
+          <h3 class="text-3xl font-bold">1965</h3>
+          <p class="text-base text-gray-300">Entered new industries with innovation.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Arrows -->
+    <button id="prev" class="absolute top-1/2 left-6 transform -translate-y-1/2 bg-[#b22222] p-6 rounded-full text-4xl text-white font-bold shadow-2xl hover:bg-red-700">
+      &#10094;
+    </button>
+    <button id="next" class="absolute top-1/2 right-6 transform -translate-y-1/2 bg-[#b22222] p-6 rounded-full text-4xl text-white font-bold shadow-2xl hover:bg-red-700">
+      &#10095;
+    </button>
+  </div>
+</section>
+
 
 
   <!-- AOS SCRIPT -->
