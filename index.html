@@ -9,8 +9,14 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
-<body class="text-white font-sans overflow-x-hidden">
+
+</head>
+<body class="text-white font-sans overflow-x-hidden" style="scroll-snap-type: y mandatory;">
 
   <!-- NAVBAR -->
 <!-- NAVBAR -->
@@ -52,8 +58,8 @@
 
 
   <!-- HERO SECTION -->
-  <section class="relative h-screen w-full flex items-center justify-start">
-    <!-- Background Image -->
+  <!-- <section class="relative h-screen w-full flex items-center justify-start">
+    
     <div class="absolute inset-0">
       <img src="https://suffolk.com/wp-content/uploads/2025/08/BU-Glass_1.jpg" 
            alt="Construction Site" 
@@ -64,15 +70,58 @@
     <div class="relative z-20 max-w-5xl px-8 lg:px-16">
 
 
-  <!-- Main Cinematic Text -->
-  <h1 class="relative text-5xl sm:text-7xl lg:text-9xl font-extrabold leading-tight tracking-tight mb-6 "       data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="1500">
+
+  <h1 class="relative text-5xl sm:text-7xl lg:text-9xl font-extrabold leading-tight tracking-tight mb-6 ">
     Building the Future,<br>
-    <span class="text-[#b22222]" data-aos="fade-right" data-aos-delay="700">
+    <span class="text-[#b22222]" >
       One Project at a Time
     </span>
   </h1>
 </div>
+  </section> -->
+
+  <section class="relative h-screen w-full overflow-hidden">
+  <!-- Background Image -->
+  <img src="https://suffolk.com/wp-content/uploads/2025/08/BU-Glass_1.jpg" 
+       class="absolute inset-0 w-full h-full object-cover z-0">
+
+  <!-- Video layer (hidden initially, expands from right-bottom) -->
+  <video id="heroVideo" autoplay muted loop playsinline 
+         class="absolute inset-0 w-full h-full object-cover z-10"
+         style="clip-path: circle(0% at 100% 100%);">
+    <source src="assets/img/hero-section.mp4" type="video/mp4">
+  </video>
+
+  <!-- Heading -->
+  <div class="relative z-20 h-full flex items-center px-16">
+    <h1 class="relative text-5xl sm:text-7xl lg:text-9xl font-extrabold leading-tight tracking-tight mb-6 ">
+    Building the Future,<br>
+    <span class="text-[#b22222]" >
+      One Project at a Time
+    </span>
+  </h1>
+  </div>
+</section>
+
+ <section class="relative h-screen w-full flex items-center justify-center scroll-snap-align-start">
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+      <source src="assets/img/second-section.mp4" type="video/mp4">
+    </video>
+    
+    <div class="relative z-10 text-center px-6">
+      
+       <h1 class="relative text-5xl sm:text-7xl lg:text-9xl font-extrabold leading-tight tracking-tight mb-6 "       >
+    Innovation in Motion<br>
+    <span class="text-[#b22222]" >
+      One Project at a Time
+    </span>
+  </h1>
+     <h5 class="text-5xl sm:text-6xl lg:text-3 xl font-extrabold text-white leading-tight mb-10">
+       Smarter projects. Smoother futures.
+      </h5>
+    </div>
   </section>
+
 <section class="h-screen flex items-center bg-white">
   <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 
@@ -368,6 +417,36 @@
       easing: 'ease-in-out',
       once: true,
     });
+
+     gsap.registerPlugin(ScrollTrigger);
+
+  // Pin hero and reveal second section
+  ScrollTrigger.create({
+    trigger: "section:nth-of-type(1)", // hero
+    start: "top top",
+    end: "bottom top",
+    pin: true, // keeps hero fixed while scrolling
+    pinSpacing: false, // removes the fake space
+    scrub: true
+  });
+
+  // Optional: fade hero text while revealing second section
+  gsap.to("section:nth-of-type(1) h1", {
+    scrollTrigger: {
+      trigger: "section:nth-of-type(2)",
+      start: "top bottom",
+      end: "top top",
+      scrub: true
+    },
+    opacity: 0,
+    y: -100
+  });
+  gsap.to("#heroVideo", {
+  delay: 1.5, // wait for image to breathe
+  duration: 2.5,
+  ease: "power3.inOut",
+  clipPath: "circle(150% at 100% 100%)" // expand bubble from bottom-right
+});
   </script>
 </body>
 </html>
