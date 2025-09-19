@@ -19,7 +19,14 @@
 
     <!-- Left Nav -->
     <nav class="flex items-center space-x-6 text-sm font-semibold">
-          <a href="about.html" class="hover:text-[#b22222]">About us</a>
+      <div class="relative group">
+        <button class="hover:text-[#b22222]">About ▾</button>
+        <div class="absolute hidden group-hover:block bg-white text-black shadow-lg mt-2 py-2 w-40">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Company</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Team</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">History</a>
+        </div>
+      </div>
       <div class="relative group">
         <button class="hover:text-[#b22222]">Careers ▾</button>
         <div class="absolute hidden group-hover:block bg-white text-black shadow-lg mt-2 py-2 w-40">
@@ -30,7 +37,7 @@
     </nav>
 
     <!-- Center Logo -->
-      <div class="text-white font-bold tracking-wide border-2 px-3 py-1 border-white">
+    <div class="text-white font-bold tracking-wide border-2 px-3 py-1 border-white">
      <a href="./index.html"> ABC Construction</a>
     </div>
 
@@ -55,7 +62,7 @@
  <section class="relative h-screen w-full flex items-center justify-center">
   <!-- Background Image -->
   <div class="absolute inset-0">
-    <img src="assets/img/about-us.jpg" 
+    <img src="assets/img/services-bg.jpg" 
          alt="Construction Site" 
          class="w-full h-full object-cover">
   </div>
@@ -64,127 +71,163 @@
     <!-- Main Cinematic Text -->
     <h1 class="relative text-5xl sm:text-7xl lg:text-9xl font-extrabold leading-tight tracking-tight mb-6 text-center"
         data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="1500">
-      About us<br>
+     Services
      
     </h1>
   </div>
 </section>
-<!-- ABOUT INTRO STRIP -->
-<!-- ABOUT INTRO STRIP -->
-<section class="bg-gray-200 py-12">
-  <div class="max-w-5xl mx-auto px-6 text-center md:text-left">
-    <p 
-      class="text-lg text-gray-700 leading-relaxed opacity-0 translate-y-8"
-      data-aos="fade-up"
-      data-aos-duration="1200"
-      data-aos-easing="ease-out-cubic"
-      data-aos-once="true"
-    >
-      ABC Construction is one of the region’s largest and most respected construction 
-      and engineering organizations. Our professionals work on some of the industry’s 
-      most complex, challenging, and rewarding projects — whether it’s boring tunnels 
-      through mountains, turning rivers into energy, or building bridges that connect 
-      communities. ABC Construction takes on important projects of every size, in any market.
-    </p>
-  </div>
-</section>
 
-<section class="bg-white py-20">
-  <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-    
-    <!-- Left content -->
-    <div 
-      data-aos="fade-right" 
-      data-aos-duration="1200" 
-      data-aos-easing="ease-out-cubic"
+<section class="bg-gray-200 py-20">
+  <div class="max-w-5xl mx-auto px-6 text-center md:text-left">
+    <h2 
+      class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6"
+      data-aos="fade-up"
       data-aos-delay="200"
     >
-      <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
-        SAFETY FIRST
-      </h2>
-      <p class="text-lg text-gray-700 leading-relaxed">
-        At ABC Construction, nothing is more important than safety. Our craft-led safety programs 
-        and commitment at all levels of our operations ensure our focus is on what matters most: 
-        that nobody gets hurt. This commitment to excellence extends to our quality, environmental 
-        and compliance performance — which is how we drive successful projects for our clients.
-      </p>
-    </div>
-
-    <!-- Right highlight -->
-    <div 
-      class="pl-6 border-l-4 border-[#b22222]" 
-      data-aos="fade-left"
-      data-aos-duration="1200" 
+      COMPREHENSIVE ENGINEERING SOLUTIONS,<br class="hidden md:block">
+      APPROACHED DIFFERENTLY
+    </h2>
+    <p 
+      class="text-lg text-gray-700 leading-relaxed"
+      data-aos="fade-up"
       data-aos-delay="400"
     >
-      <p class="text-lg text-gray-800">
-        ABC Construction’s safety performance is nearly 
-        <span class="font-extrabold text-[#b22222]">10 times</span> 
-        better than the industry average.
-      </p>
-    </div>
-
+      Backed by over <span class="font-bold text-[#b22222]">25 years</span> of construction expertise, 
+      ABC Construction’s engineers understand the crucial role that contractors have in overall project 
+      development and delivery. Our construction-focused engineering approach fosters a true, one-team 
+      partnership between engineering and construction throughout the project lifecycle — working together 
+      to minimize risk, schedule delays, and project costs from feasibility all the way through design 
+      and project execution.
+    </p>
   </div>
 </section>
 
 <section class="bg-white py-20">
-  <div class="max-w-7xl mx-auto px-6 text-center">
-    
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
     <!-- Heading -->
-    <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6" data-aos="fade-up">
-      OUR CORE VALUES
-    </h2>
-    <p class="text-gray-600 max-w-3xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="200">
-      At ABC Construction, we continue to uphold the same business ethics in everything we do. 
-      Our four core values — People, Integrity, Excellence and Stewardship — guide our journey.
-    </p>
-    
-    <!-- Button -->
-   <div class="mb-14" data-aos="zoom-in" data-aos-delay="400">
-  <a href="#values" 
-     class="bg-[#b22222] text-white px-6 py-3 font-semibold rounded-md 
-            hover:bg-[#8b0000] transition">
-    Our Core Values
-  </a>
-</div>
+    <div class="mb-12 text-center">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4" 
+          data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-out-cubic">
+        OPTIMIZING PROJECT SUCCESS WITH <br class="hidden md:block"> 
+        <span class="text-[#b22222]">CONSTRUCTION-FOCUSED ENGINEERING</span>
+      </h2>
+      <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed" 
+         data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200" data-aos-easing="ease-out-cubic">
+        Construction-focused engineering is a holistic approach to project development that 
+        leads to the safest, most cost-effective solutions for even the most complex projects, 
+        reducing delays, risks, and costs while ensuring design excellence.
+      </p>
+      <div class="mt-6" 
+           data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000" data-aos-easing="ease-out-back">
+        <span class="text-3xl font-extrabold text-[#b22222]">#3</span>
+        <p class="text-gray-800 font-semibold">
+          TOP DESIGN-BUILD FIRM<br>
+          <span class="text-sm text-gray-600">ENR, 2024</span>
+        </p>
+      </div>
+    </div>
 
+    <!-- Icon Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <!-- Item 1 -->
+      <div class="text-center px-6" 
+           data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+        <img src="assets/img/icons/Icons-2-03-1.jpg" alt="Cost Control Icon" class="mx-auto mb-4">
+        <h3 class="font-bold text-lg mb-2">IMPROVED COST CONTROL</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Our approach helps anticipate and address cost concerns, 
+          enabling more accurate estimates and predictable outcomes.
+        </p>
+      </div>
 
-    <!-- Values Grid -->
-    <div id="values" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      
-      <div class="bg-gray-100 p-6 text-left" data-aos="fade-up" data-aos-delay="100">
-        <h3 class="font-extrabold text-lg text-gray-900 mb-2">PEOPLE</h3>
-        <p class="text-gray-600 text-sm">
-          We care for the well-being of our people and help them grow in their ability to succeed.
+      <!-- Item 2 -->
+      <div class="text-center px-6" 
+           data-aos="flip-left" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+        <img src="assets/img/icons/Icons-2-04.jpg" alt="Risk Icon" class="mx-auto mb-4">
+        <h3 class="font-bold text-lg mb-2">RISK IDENTIFICATION & MITIGATION</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          We conduct risk assessments early and partner with teams to minimize 
+          schedule delays, budget overruns, and design compromises.
         </p>
       </div>
-      
-      <div class="bg-gray-100 p-6 text-left" data-aos="fade-up" data-aos-delay="200">
-        <h3 class="font-extrabold text-lg text-gray-900 mb-2">INTEGRITY</h3>
-        <p class="text-gray-600 text-sm">
-          We conduct our business with the highest ethical standards and take responsibility for our actions.
+
+      <!-- Item 3 -->
+      <div class="text-center px-6" 
+           data-aos="flip-left" data-aos-delay="300" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+        <img src="assets/img/icons/Icons-2-05.jpg" alt="Tech Icon" class="mx-auto mb-4">
+        <h3 class="font-bold text-lg mb-2">TECHNOLOGY INTEGRATION</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Leveraging the latest technology packages ensures optimized 
+          configurations, seamless coordination, and smarter solutions.
         </p>
       </div>
-      
-      <div class="bg-gray-100 p-6 text-left" data-aos="fade-up" data-aos-delay="300">
-        <h3 class="font-extrabold text-lg text-gray-900 mb-2">EXCELLENCE</h3>
-        <p class="text-gray-600 text-sm">
-          We commit to excellence in all we do with a focus on quality and continuous improvement.
+
+      <!-- Item 4 -->
+      <div class="text-center px-6" 
+           data-aos="flip-left" data-aos-delay="400" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+        <img src="assets/img/icons/Icons-2-06.jpg" alt="Construction Icon" class="mx-auto mb-4">
+        <h3 class="font-bold text-lg mb-2">STREAMLINED CONSTRUCTION</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          We simplify processes and improve collaboration, reducing 
+          inefficiencies and ensuring high-quality results.
         </p>
       </div>
-      
-      <div class="bg-gray-100 p-6 text-left" data-aos="fade-up" data-aos-delay="400">
-        <h3 class="font-extrabold text-lg text-gray-900 mb-2">STEWARDSHIP</h3>
-        <p class="text-gray-600 text-sm">
-          We preserve our unique culture to build a stronger foundation for future generations.
-        </p>
-      </div>
-      
     </div>
   </div>
 </section>
 
 
+<section class="bg-white py-20">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <!-- Heading -->
+    <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-12" 
+        data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+      ENGINEERING SERVICES:
+    </h2>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-gray-800">
+      
+      <!-- Pre-Construction -->
+      <div data-aos="fade-up" data-aos-delay="100">
+        <h3 class="font-bold text-lg mb-4">PRE-CONSTRUCTION</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li>• Project development</li>
+          <li>• Capital studies</li>
+          <li>• Asset acquisition</li>
+          <li>• Owner’s engineer</li>
+          <li>• FEL / FEED & indicative estimating</li>
+          <li>• Preliminary engineering</li>
+          <li>• Independent design reviews & assurance</li>
+        </ul>
+      </div>
+
+      <!-- Project Execution -->
+      <div data-aos="fade-up" data-aos-delay="200">
+        <h3 class="font-bold text-lg mb-4">PROJECT EXECUTION</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li>• Detailed design</li>
+          <li>• EPC / design-build</li>
+          <li>• Temporary works</li>
+          <li>• Design management</li>
+          <li>• Design assurance</li>
+        </ul>
+      </div>
+
+      <!-- Post-Construction -->
+      <div data-aos="fade-up" data-aos-delay="300">
+        <h3 class="font-bold text-lg mb-4">POST-CONSTRUCTION</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li>• Commissioning</li>
+          <li>• Start-up</li>
+          <li>• Plant services</li>
+          <li>• Independent engineer</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
   <section 
@@ -271,8 +314,8 @@
 
         <!-- Navigation Links -->
         <div class="flex flex-wrap gap-6 md:gap-10 text-sm font-semibold">
-          <a href="index.html" class="hover:text-[#b22222]">Home</a>
-          <a href="about.html" class="hover:text-[#b22222]">About</a>
+          <a href="#" class="hover:text-[#b22222]">Home</a>
+          <a href="#" class="hover:text-[#b22222]">About</a>
           <a href="#" class="hover:text-[#b22222]">Contact</a>
           <a href="#" class="hover:text-[#b22222]">Services</a>
           <a href="projects.html" class="hover:text-[#b22222]">Projects</a>
