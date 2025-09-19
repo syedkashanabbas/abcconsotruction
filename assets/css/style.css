@@ -20,5 +20,10 @@
   display: flex !important;
   opacity: 1;
 }
-
+.testimonial-slide {
+  transition: opacity 0.7s ease-in-out;
+}
+.active-dot {
+  background-color: #b22222 !important;
+}
 
