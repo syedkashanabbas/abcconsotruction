@@ -1,57 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ABC Construction</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABC Construction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="text-white font-sans overflow-x-hidden"
+    style="scroll-snap-type: y mandatory"
+  >
+    <!-- NAVBAR -->
+    <!-- NAVBAR -->
+    <header class="fixed top-4 left-0 right-0 z-50 flex justify-center">
+      <div
+        class="max-w-7xl w-full mx-auto bg-[#0a1f44] text-white rounded-md shadow-lg px-6 py-3 flex items-center justify-between"
+      >
+        <!-- Left Nav -->
+        <nav class="flex items-center space-x-6 text-sm font-semibold">
+          <a href="about.html" class="hover:text-[#b22222]">About us</a>
+          <div class="relative group">
+            <button class="hover:text-[#b22222]">Careers ▾</button>
+            <div
+              class="absolute hidden group-hover:block bg-white text-black shadow-lg mt-2 py-2 w-40"
+            >
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                >Open Roles</a
+              >
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                >Internships</a
+              >
+            </div>
+          </div>
+        </nav>
 
-</head>
-<body class="text-white font-sans overflow-x-hidden" style="scroll-snap-type: y mandatory;">
-
-  <!-- NAVBAR -->
-<!-- NAVBAR -->
-<header class="fixed top-4 left-0 right-0 z-50 flex justify-center">
-  <div class="max-w-7xl w-full mx-auto bg-[#0a1f44] text-white rounded-md shadow-lg px-6 py-3 flex items-center justify-between">
-
-    <!-- Left Nav -->
-    <nav class="flex items-center space-x-6 text-sm font-semibold">
-          <a href="about.html" class="hover:text-[#b22222]">About Us</a>
-      <div class="relative group">
-        <button class="hover:text-[#b22222]">Careers ▾</button>
-        <div class="absolute hidden group-hover:block bg-white text-black shadow-lg mt-2 py-2 w-40">
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Open Roles</a>
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Internships</a>
+        <!-- Center Logo -->
+        <div
+          class="text-white font-bold tracking-wide border-2 px-3 py-1 border-white"
+        >
+          ABC Construction
         </div>
+
+        <!-- Right Nav -->
+        <nav class="flex items-center space-x-6 text-sm font-semibold">
+          <a href="projects.html" class="hover:text-[#b22222]">Projects</a>
+          <a href="#" class="hover:text-[#b22222]">Sectors</a>
+        </nav>
       </div>
-    </nav>
+    </header>
 
-    <!-- Center Logo -->
-    <div class="text-white font-bold tracking-wide border-2 px-3 py-1 border-white">
-      ABC Construction
-    </div>
-
-    <!-- Right Nav -->
-    <nav class="flex items-center space-x-6 text-sm font-semibold">
-      <a href="#" class="hover:text-[#b22222]">Projects</a>
-      <a href="#" class="hover:text-[#b22222]">Sectors</a>
-    
-    </nav>
-  </div>
-</header>
-
-
-  <!-- HERO SECTION -->
-  <!-- <section class="relative h-screen w-full flex items-center justify-start">
+    <!-- HERO SECTION -->
+    <!-- <section class="relative h-screen w-full flex items-center justify-start">
     
     <div class="absolute inset-0">
       <img src="https://suffolk.com/wp-content/uploads/2025/08/BU-Glass_1.jpg" 
@@ -73,536 +84,918 @@
 </div>
   </section> -->
 
-  <section class="relative h-screen w-full overflow-hidden">
-  <!-- Background Image -->
-  <img src="assets/img/hero-bg.jpg" 
-       class="absolute inset-0 w-full h-full object-cover z-0">
+    <section class="relative h-screen w-full overflow-hidden">
+      <!-- Background Image -->
+      <img
+        src="assets/img/hero-bg.jpg"
+        class="absolute inset-0 w-full h-full object-cover z-0"
+      />
 
-  <!-- Video layer (hidden initially, expands from right-bottom) -->
-  <video id="heroVideo" autoplay muted loop playsinline 
-         class="absolute inset-0 w-full h-full object-cover z-10"
-         style="clip-path: circle(0% at 100% 100%);">
-    <source src="assets/img/hero-section.mp4" type="video/mp4">
-  </video>
+      <!-- Video layer (hidden initially, expands from right-bottom) -->
+      <video
+        id="heroVideo"
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover z-10"
+        style="clip-path: circle(0% at 100% 100%)"
+      >
+        <source src="assets/img/hero-section.mp4" type="video/mp4" />
+      </video>
 
-  <!-- Heading -->
-  <div class="relative z-20 h-full flex items-center px-16">
-   <h1 id="heroHeading" class="relative text-5xl sm:text-7xl lg:text-9xl font-extrabold leading-tight tracking-tight mb-6 overflow-hidden">
-  <span class="block hero-line">Building the Future,</span>
-  <span class="block hero-line text-[#b22222]">One Project at a Time</span>
-</h1>
-
-  </div>
-</section>
-
- <section class="relative h-screen w-full flex items-center justify-center scroll-snap-align-start">
-    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
-      <source src="assets/img/second-section.mp4" type="video/mp4">
-    </video>
-    
-    <div class="relative z-10 text-center px-6">
-      
-  <h1 id="motionHeading" 
-  class="relative text-5xl sm:text-7xl lg:text-9xl font-extrabold leading-tight tracking-tight mb-6 overflow-hidden">
-  <span class="block motion-line">Innovation in Motion</span>
-  <span class="block motion-line text-[#b22222]">One Project at a Time</span>
-</h1>
-
-<h5 class="text-5xl sm:text-6xl lg:text-3 xl font-extrabold text-white leading-tight mb-10">
-  Smarter projects. Smoother futures.
-</h5>
-
-    </div>
-  </section>
-  
-
-<section class="h-screen flex items-center bg-white">
-  <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-
-    <!-- Left Content -->
-    <div data-aos="fade-right">
-      <h2 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-black leading-tight mb-10">
-        Who We Are
-      </h2>
-      <p class="text-xl text-gray-700 mb-8">
-        ABC Construction is one of the region’s largest and most respected engineering and construction organizations. 
-        With a strong commitment to safety, quality, and sustainability, we build projects that last generations. 
-        Our vision is rooted in innovation and delivered by people who care.
-      </p>
-
-      <p class="text-lg font-semibold text-black mb-12">
-        Learn more about ABC Construction.
-      </p>
-
-      <div class="flex space-x-8">
-        <a href="#engineering" 
-           class="px-10 py-5 bg-[#b22222] text-white text-lg font-bold rounded-md shadow-xl hover:bg-black transition">
-          Engineering
-        </a>
-        <a href="#construction" 
-           class="px-10 py-5 bg-black text-white text-lg font-bold rounded-md shadow-xl hover:bg-[#b22222] transition">
-          Construction
-        </a>
+      <!-- Heading -->
+      <div class="relative z-20 h-full flex items-center px-16">
+        <h1
+          id="heroHeading"
+          class="relative text-5xl sm:text-7xl lg:text-9xl font-extrabold leading-tight tracking-tight mb-6 overflow-hidden"
+        >
+          <span class="block hero-line">Building the Future,</span>
+          <span class="block hero-line text-[#b22222]"
+            >One Project at a Time</span
+          >
+        </h1>
       </div>
-    </div>
+    </section>
 
-    <!-- Right Stats -->
-    <div class="space-y-20" data-aos="fade-left">
-      <div class="flex items-start space-x-6">
-        <div class="w-1.5 bg-[#b22222]"></div>
-        <div>
-          <p class="text-6xl lg:text-7xl font-extrabold text-black">$16.8B</p>
-          <p class="text-lg text-gray-600">2024 Revenues</p>
-        </div>
+    <section
+      class="relative h-screen w-full flex items-center justify-center scroll-snap-align-start"
+    >
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="assets/img/second-section.mp4" type="video/mp4" />
+      </video>
+
+      <div class="relative z-10 text-center px-6">
+        <h1
+          id="motionHeading"
+          class="relative text-5xl sm:text-7xl lg:text-9xl font-extrabold leading-tight tracking-tight mb-6 overflow-hidden"
+        >
+          <span class="block motion-line">Innovation in Motion</span>
+          <span class="block motion-line text-[#b22222]"
+            >One Project at a Time</span
+          >
+        </h1>
+
+        <h5
+          class="text-5xl sm:text-6xl lg:text-3 xl font-extrabold text-white leading-tight mb-10"
+        >
+          Smarter projects. Smoother futures.
+        </h5>
       </div>
+    </section>
 
-      <div class="flex items-start space-x-6">
-        <div class="w-1.5 bg-[#b22222]"></div>
-        <div>
-          <p class="text-6xl lg:text-7xl font-extrabold text-black">31,800</p>
-          <p class="text-lg text-gray-600">Craft & Staff Employees</p>
-        </div>
-      </div>
-
-      <div class="flex items-start space-x-6">
-        <div class="w-1.5 bg-[#b22222]"></div>
-        <div>
-          <p class="text-6xl lg:text-7xl font-extrabold text-black">#3</p>
-          <p class="text-lg text-gray-600">Rank in ENR’s Top 400 Contractors</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="services" class="w-full h-screen bg-white mb-20">
-  <div class="max-w-7xl mx-auto px-6 lg:px-12 py-16 flex flex-col">
-    <!-- Heading -->
-    <div class="mb-12">
-      <p class="uppercase text-xs tracking-wider text-gray-500 font-semibold">
-        What We Do
-      </p>
-      <h2 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-black leading-tight mb-10">
-        We have a vision for the future of construction.
-      </h2>
-    </div>
-
-    <!-- Tabs -->
-    <div class="flex space-x-6 text-sm font-semibold mb-10">
-      <button class="tab-btn active text-[#b22222]" data-tab="buildings">Buildings</button>
-      <button class="tab-btn" data-tab="civil">Civil Infrastructure</button>
-      <button class="tab-btn" data-tab="industrial">Heavy Industrial</button>
-      <button class="tab-btn" data-tab="special">Special Projects</button>
-    </div>
-
-    <!-- Tab Contents -->
-    <div class="relative w-full h-[65vh] overflow-hidden">
-      
-      <!-- Buildings -->
-      <div class="tab-content active absolute inset-0 flex flex-col lg:flex-row gap-10 items-center">
-        <div class="w-full lg:w-1/2 h-full">
-          <img src="assets/img/property1.jpg" class="w-full h-full object-cover rounded-md shadow-lg">
-        </div>
-        <div class="w-full lg:w-1/2 pr-6">
-          <h3 class="text-3xl font-bold mb-4">Stunning structures, sustainably built</h3>
-          <p class="text-gray-700 mb-6">
-            From skyscrapers to campuses, we deliver architectural marvels that combine functionality with sustainability. 
-            Our mission is to create spaces that inspire communities while minimizing environmental impact.
+    <section class="h-screen flex items-center bg-white">
+      <div
+        class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center"
+      >
+        <!-- Left Content -->
+        <div data-aos="fade-right">
+          <h2
+            class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-black leading-tight mb-10"
+          >
+            Who We Are
+          </h2>
+          <p class="text-xl text-gray-700 mb-8">
+            ABC Construction is one of the region’s largest and most respected
+            engineering and construction organizations. With a strong commitment
+            to safety, quality, and sustainability, we build projects that last
+            generations. Our vision is rooted in innovation and delivered by
+            people who care.
           </p>
 
-          <!-- Features -->
-          <div class="space-y-6">
-            <div class="flex items-start space-x-4">
-              <svg class="w-6 h-6 text-[#b22222] flex-shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2"
-                viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <div>
-                <h4 class="text-lg font-semibold text-gray-900">Green Building Standards</h4>
-                <p class="text-gray-600 text-sm">We use eco-certified materials and adhere to LEED practices.</p>
-              </div>
-            </div>
-            <div class="flex items-start space-x-4">
-              <svg class="w-6 h-6 text-[#b22222] flex-shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2"
-                viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <div>
-                <h4 class="text-lg font-semibold text-gray-900">150+ Completed Projects</h4>
-                <p class="text-gray-600 text-sm">Our track record spans commercial, residential, and institutional builds.</p>
-              </div>
-            </div>
-            <div class="flex items-start space-x-4">
-              <svg class="w-6 h-6 text-[#b22222] flex-shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2"
-                viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <div>
-                <h4 class="text-lg font-semibold text-gray-900">Trusted Global Clients</h4>
-                <p class="text-gray-600 text-sm">We work with Fortune 500 companies and governments worldwide.</p>
-              </div>
+          <p class="text-lg font-semibold text-black mb-12">
+            Learn more about ABC Construction.
+          </p>
+
+          <div class="flex space-x-8">
+            <a
+              href="#engineering"
+              class="px-10 py-5 bg-[#b22222] text-white text-lg font-bold rounded-md shadow-xl hover:bg-black transition"
+            >
+              Engineering
+            </a>
+            <a
+              href="#construction"
+              class="px-10 py-5 bg-black text-white text-lg font-bold rounded-md shadow-xl hover:bg-[#b22222] transition"
+            >
+              Construction
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Stats -->
+        <div class="space-y-20" data-aos="fade-left">
+          <div class="flex items-start space-x-6">
+            <div class="w-1.5 bg-[#b22222]"></div>
+            <div>
+              <p class="text-6xl lg:text-7xl font-extrabold text-black">
+                $16.8B
+              </p>
+              <p class="text-lg text-gray-600">2024 Revenues</p>
             </div>
           </div>
 
-          <!-- CTA -->
-          <a href="#" class="inline-block mt-8 text-[#b22222] font-semibold hover:underline">
-            Learn More →
-          </a>
-        </div>
-      </div>
-
-      <!-- Civil -->
-      <div class="tab-content absolute inset-0 hidden flex-col lg:flex-row gap-10 items-center">
-        <div class="w-full lg:w-1/2 h-full">
-          <img src="assets/img/property2.jpg" class="w-full h-full object-cover rounded-md shadow-lg">
-        </div>
-        <div class="w-full lg:w-1/2 pr-6">
-          <h3 class="text-3xl font-bold mb-4">Strong Civil Infrastructure</h3>
-          <p class="text-gray-700 mb-6">From bridges to highways, we deliver infrastructure that connects nations, 
-            supports economies, and stands the test of time.</p>
-          <div class="space-y-6">
-            <div class="flex items-start space-x-4">
-              <svg class="w-6 h-6 text-[#b22222] flex-shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2"
-                viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <div>
-                <h4 class="text-lg font-semibold text-gray-900">Bridge Engineering</h4>
-                <p class="text-gray-600 text-sm">Safely spanning cities and rivers with innovation.</p>
-              </div>
-            </div>
-            <div class="flex items-start space-x-4">
-              <svg class="w-6 h-6 text-[#b22222] flex-shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2"
-                viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <div>
-                <h4 class="text-lg font-semibold text-gray-900">Highway Systems</h4>
-                <p class="text-gray-600 text-sm">Future-ready networks for urban mobility and commerce.</p>
-              </div>
+          <div class="flex items-start space-x-6">
+            <div class="w-1.5 bg-[#b22222]"></div>
+            <div>
+              <p class="text-6xl lg:text-7xl font-extrabold text-black">
+                31,800
+              </p>
+              <p class="text-lg text-gray-600">Craft & Staff Employees</p>
             </div>
           </div>
-          <a href="#" class="inline-block mt-8 text-[#b22222] font-semibold hover:underline">Learn More →</a>
-        </div>
-      </div>
 
-      <!-- Industrial -->
-      <div class="tab-content absolute inset-0 hidden flex-col lg:flex-row gap-10 items-center">
-        <div class="w-full lg:w-1/2 h-full">
-          <img src="assets/img/property3.jpg" class="w-full h-full object-cover rounded-md shadow-lg">
-        </div>
-        <div class="w-full lg:w-1/2 pr-6">
-          <h3 class="text-3xl font-bold mb-4">Heavy Industrial Expertise</h3>
-          <p class="text-gray-700 mb-6">Factories, plants, and industrial facilities engineered for efficiency and scale.</p>
-          <div class="space-y-6">
-            <div class="flex items-start space-x-4">
-              <svg class="w-6 h-6 text-[#b22222] flex-shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2"
-                viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <div>
-                <h4 class="text-lg font-semibold text-gray-900">Advanced Machinery</h4>
-                <p class="text-gray-600 text-sm">Equipped to handle the largest and most complex projects.</p>
-              </div>
+          <div class="flex items-start space-x-6">
+            <div class="w-1.5 bg-[#b22222]"></div>
+            <div>
+              <p class="text-6xl lg:text-7xl font-extrabold text-black">#3</p>
+              <p class="text-lg text-gray-600">
+                Rank in ENR’s Top 400 Contractors
+              </p>
             </div>
           </div>
-          <a href="#" class="inline-block mt-8 text-[#b22222] font-semibold hover:underline">Learn More →</a>
         </div>
       </div>
-
-      <!-- Special -->
-      <div class="tab-content absolute inset-0 hidden flex-col lg:flex-row gap-10 items-center">
-        <div class="w-full lg:w-1/2 h-full">
-          <img src="assets/img/property4.jpg" class="w-full h-full object-cover rounded-md shadow-lg">
+    </section>
+    <section id="services" class="w-full h-screen bg-white mb-20">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 py-16 flex flex-col">
+        <!-- Heading -->
+        <div class="mb-12">
+          <p
+            class="uppercase text-xs tracking-wider text-gray-500 font-semibold"
+          >
+            What We Do
+          </p>
+          <h2
+            class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-black leading-tight mb-10"
+          >
+            We have a vision for the future of construction.
+          </h2>
         </div>
-        <div class="w-full lg:w-1/2 pr-6">
-          <h3 class="text-3xl font-bold mb-4">Special Projects with Impact</h3>
-          <p class="text-gray-700 mb-6">High-profile, unique, and visionary projects that set benchmarks in the industry.</p>
-          <div class="space-y-6">
-            <div class="flex items-start space-x-4">
-              <svg class="w-6 h-6 text-[#b22222] flex-shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2"
-                viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <div>
-                <h4 class="text-lg font-semibold text-gray-900">Iconic Landmarks</h4>
-                <p class="text-gray-600 text-sm">Projects that redefine skylines and inspire generations.</p>
+
+        <!-- Tabs -->
+        <div class="flex space-x-6 text-sm font-semibold mb-10">
+          <button class="tab-btn active text-[#b22222]" data-tab="buildings">
+            Buildings
+          </button>
+          <button class="tab-btn" data-tab="civil">Civil Infrastructure</button>
+          <button class="tab-btn" data-tab="industrial">
+            Heavy Industrial
+          </button>
+          <button class="tab-btn" data-tab="special">Special Projects</button>
+        </div>
+
+        <!-- Tab Contents -->
+        <div class="relative w-full h-[65vh] overflow-hidden">
+          <!-- Buildings -->
+          <div
+            class="tab-content active absolute inset-0 flex flex-col lg:flex-row gap-10 items-center"
+          >
+            <div class="w-full lg:w-1/2 h-full">
+              <img
+                src="assets/img/property1.jpg"
+                class="w-full h-full object-cover rounded-md shadow-lg"
+              />
+            </div>
+            <div class="w-full lg:w-1/2 pr-6">
+              <h3 class="text-3xl font-bold mb-4">
+                Stunning structures, sustainably built
+              </h3>
+              <p class="text-gray-700 mb-6">
+                From skyscrapers to campuses, we deliver architectural marvels
+                that combine functionality with sustainability. Our mission is
+                to create spaces that inspire communities while minimizing
+                environmental impact.
+              </p>
+
+              <!-- Features -->
+              <div class="space-y-6">
+                <div class="flex items-start space-x-4">
+                  <svg
+                    class="w-6 h-6 text-[#b22222] flex-shrink-0 mt-1"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <div>
+                    <h4 class="text-lg font-semibold text-gray-900">
+                      Green Building Standards
+                    </h4>
+                    <p class="text-gray-600 text-sm">
+                      We use eco-certified materials and adhere to LEED
+                      practices.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                  <svg
+                    class="w-6 h-6 text-[#b22222] flex-shrink-0 mt-1"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <div>
+                    <h4 class="text-lg font-semibold text-gray-900">
+                      150+ Completed Projects
+                    </h4>
+                    <p class="text-gray-600 text-sm">
+                      Our track record spans commercial, residential, and
+                      institutional builds.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                  <svg
+                    class="w-6 h-6 text-[#b22222] flex-shrink-0 mt-1"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <div>
+                    <h4 class="text-lg font-semibold text-gray-900">
+                      Trusted Global Clients
+                    </h4>
+                    <p class="text-gray-600 text-sm">
+                      We work with Fortune 500 companies and governments
+                      worldwide.
+                    </p>
+                  </div>
+                </div>
               </div>
+
+              <!-- CTA -->
+              <a
+                href="#"
+                class="inline-block mt-8 text-[#b22222] font-semibold hover:underline"
+              >
+                Learn More →
+              </a>
             </div>
           </div>
-          <a href="#" class="inline-block mt-8 text-[#b22222] font-semibold hover:underline">Learn More →</a>
-        </div>
-      </div>
 
-    </div>
-  </div>
-</section>
-<section class="relative w-full bg-[#111] mt-36 py-28 overflow-hidden">
-  <div class="text-center mb-20">
-    <h2 class="text-5xl md:text-6xl font-extrabold tracking-wide text-white">OUR STORY</h2>
-    <p class="mt-8 max-w-4xl mx-auto text-gray-300 text-lg">
-      Our journey began decades ago, and each milestone shaped the company we are today.
-    </p>
-  </div>
+          <!-- Civil -->
+          <div
+            class="tab-content absolute inset-0 hidden flex-col lg:flex-row gap-10 items-center"
+          >
+            <div class="w-full lg:w-1/2 h-full">
+              <img
+                src="assets/img/property2.jpg"
+                class="w-full h-full object-cover rounded-md shadow-lg"
+              />
+            </div>
+            <div class="w-full lg:w-1/2 pr-6">
+              <h3 class="text-3xl font-bold mb-4">
+                Strong Civil Infrastructure
+              </h3>
+              <p class="text-gray-700 mb-6">
+                From bridges to highways, we deliver infrastructure that
+                connects nations, supports economies, and stands the test of
+                time.
+              </p>
+              <div class="space-y-6">
+                <div class="flex items-start space-x-4">
+                  <svg
+                    class="w-6 h-6 text-[#b22222] flex-shrink-0 mt-1"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <div>
+                    <h4 class="text-lg font-semibold text-gray-900">
+                      Bridge Engineering
+                    </h4>
+                    <p class="text-gray-600 text-sm">
+                      Safely spanning cities and rivers with innovation.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                  <svg
+                    class="w-6 h-6 text-[#b22222] flex-shrink-0 mt-1"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <div>
+                    <h4 class="text-lg font-semibold text-gray-900">
+                      Highway Systems
+                    </h4>
+                    <p class="text-gray-600 text-sm">
+                      Future-ready networks for urban mobility and commerce.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="#"
+                class="inline-block mt-8 text-[#b22222] font-semibold hover:underline"
+                >Learn More →</a
+              >
+            </div>
+          </div>
 
-  <!-- Slider Wrapper -->
-  <div class="relative max-w-[1600px] mx-auto px-6">
-    <!-- Slides Container -->
-    <div id="story-slider" class="flex items-center justify-center gap-12 transition-transform duration-500">
-      <!-- Cards -->
-      <div class="story-card relative bg-black rounded-2xl overflow-hidden flex-shrink-0 w-[22rem] h-[22rem] transform transition-all duration-500">
-        <img src="assets/img/story-1.jpg" class="w-full h-full object-cover opacity-70">
-        <div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
-          <h3 class="text-3xl font-bold">1900</h3>
-          <p class="text-base text-gray-300">Our first project sets the foundation.</p>
-        </div>
-      </div>
-      <div class="story-card relative bg-black rounded-2xl overflow-hidden flex-shrink-0 w-[22rem] h-[22rem] transform transition-all duration-500">
-        <img src="assets/img/story-2.jpg" class="w-full h-full object-cover opacity-70">
-        <div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
-          <h3 class="text-3xl font-bold">1924</h3>
-          <p class="text-base text-gray-300">Awarded our first $1M contract.</p>
-        </div>
-      </div>
-      <div class="story-card relative bg-black rounded-2xl overflow-hidden flex-shrink-0 w-[22rem] h-[22rem] transform transition-all duration-500">
-        <img src="assets/img/story-3.jpg" class="w-full h-full object-cover opacity-70">
-        <div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
-          <h3 class="text-3xl font-bold">1931</h3>
-          <p class="text-base text-gray-300">Leadership change fuels growth.</p>
-        </div>
-      </div>
-      <div class="story-card relative bg-black rounded-2xl overflow-hidden flex-shrink-0 w-[22rem] h-[22rem] transform transition-all duration-500">
-        <img src="assets/img/story-4.jpg" class="w-full h-full object-cover opacity-70">
-        <div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
-          <h3 class="text-3xl font-bold">1950</h3>
-          <p class="text-base text-gray-300">Global expansion begins.</p>
-        </div>
-      </div>
-      <div class="story-card relative bg-black rounded-2xl overflow-hidden flex-shrink-0 w-[22rem] h-[22rem] transform transition-all duration-500">
-        <img src="assets/img/story-1.jpg" class="w-full h-full object-cover opacity-70">
-        <div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
-          <h3 class="text-3xl font-bold">1965</h3>
-          <p class="text-base text-gray-300">Entered new industries with innovation.</p>
-        </div>
-      </div>
-    </div>
+          <!-- Industrial -->
+          <div
+            class="tab-content absolute inset-0 hidden flex-col lg:flex-row gap-10 items-center"
+          >
+            <div class="w-full lg:w-1/2 h-full">
+              <img
+                src="assets/img/property3.jpg"
+                class="w-full h-full object-cover rounded-md shadow-lg"
+              />
+            </div>
+            <div class="w-full lg:w-1/2 pr-6">
+              <h3 class="text-3xl font-bold mb-4">
+                Heavy Industrial Expertise
+              </h3>
+              <p class="text-gray-700 mb-6">
+                Factories, plants, and industrial facilities engineered for
+                efficiency and scale.
+              </p>
+              <div class="space-y-6">
+                <div class="flex items-start space-x-4">
+                  <svg
+                    class="w-6 h-6 text-[#b22222] flex-shrink-0 mt-1"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <div>
+                    <h4 class="text-lg font-semibold text-gray-900">
+                      Advanced Machinery
+                    </h4>
+                    <p class="text-gray-600 text-sm">
+                      Equipped to handle the largest and most complex projects.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="#"
+                class="inline-block mt-8 text-[#b22222] font-semibold hover:underline"
+                >Learn More →</a
+              >
+            </div>
+          </div>
 
-    <!-- Arrows -->
-    <button id="prev" class="absolute top-1/2 left-6 transform -translate-y-1/2 bg-[#b22222] p-6 rounded-full text-4xl text-white font-bold shadow-2xl hover:bg-red-700">
-      &#10094;
-    </button>
-    <button id="next" class="absolute top-1/2 right-6 transform -translate-y-1/2 bg-[#b22222] p-6 rounded-full text-4xl text-white font-bold shadow-2xl hover:bg-red-700">
-      &#10095;
-    </button>
-  </div>
-</section>
-
-
-<section class="bg-gray-100 py-12  text-black">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
-   <h2 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-black leading-tight mb-10">
-        Our Projects
-      </h2>
-    <!-- Card 1 -->
-    <div class="flex flex-col bg-white transition-colors duration-300 hover:bg-[#b22222] hover:text-white">
-      <img src="https://picsum.photos/600/400?random=1" alt="Project 1" class="w-full h-56 object-cover">
-      <div class="p-6 flex flex-col flex-grow">
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="px-3 py-1 text-xs font-semibold bg-gray-200 rounded-full transition-colors duration-300 hover:bg-white hover:text-black">
-            Asphalt Paving & Construction
-          </span>
-          <span class="px-3 py-1 text-xs font-semibold bg-gray-200 rounded-full transition-colors duration-300 hover:bg-white hover:text-black">
-            Bridges & Structures
-          </span>
+          <!-- Special -->
+          <div
+            class="tab-content absolute inset-0 hidden flex-col lg:flex-row gap-10 items-center"
+          >
+            <div class="w-full lg:w-1/2 h-full">
+              <img
+                src="assets/img/property4.jpg"
+                class="w-full h-full object-cover rounded-md shadow-lg"
+              />
+            </div>
+            <div class="w-full lg:w-1/2 pr-6">
+              <h3 class="text-3xl font-bold mb-4">
+                Special Projects with Impact
+              </h3>
+              <p class="text-gray-700 mb-6">
+                High-profile, unique, and visionary projects that set benchmarks
+                in the industry.
+              </p>
+              <div class="space-y-6">
+                <div class="flex items-start space-x-4">
+                  <svg
+                    class="w-6 h-6 text-[#b22222] flex-shrink-0 mt-1"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <div>
+                    <h4 class="text-lg font-semibold text-gray-900">
+                      Iconic Landmarks
+                    </h4>
+                    <p class="text-gray-600 text-sm">
+                      Projects that redefine skylines and inspire generations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="#"
+                class="inline-block mt-8 text-[#b22222] font-semibold hover:underline"
+                >Learn More →</a
+              >
+            </div>
+          </div>
         </div>
-        <h3 class="text-xl font-bold mb-2">State Route 42 – North Henry Boulevard Widening Project</h3>
-        <p class="text-sm flex-grow">State Route 42, known locally as North Henry Boulevard, serves as a crucial transportation artery in the southern suburbs...</p>
-        <a href="#" class="mt-4 inline-flex items-center font-semibold group">
-          Read More
-          <span class="ml-2 transform group-hover:translate-x-1 transition">→</span>
-        </a>
       </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="flex flex-col bg-white transition-colors duration-300 hover:bg-[#b22222] hover:text-white">
-      <img src="https://picsum.photos/600/400?random=2" alt="Project 2" class="w-full h-56 object-cover">
-      <div class="p-6 flex flex-col flex-grow">
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="px-3 py-1 text-xs font-semibold bg-gray-200 rounded-full transition-colors duration-300 hover:bg-white hover:text-black">
-            Asphalt Paving & Construction
-          </span>
-          <span class="px-3 py-1 text-xs font-semibold bg-gray-200 rounded-full transition-colors duration-300 hover:bg-white hover:text-black">
-            Grading & Utilities
-          </span>
-        </div>
-        <h3 class="text-xl font-bold mb-2">Polk County Airport/Cornelius Moore Field (4A4) Project</h3>
-        <p class="text-sm flex-grow">Polk County Airport (4A4), officially known as Cornelius Moore Field, has been a cornerstone of Cedartown's infrastructure...</p>
-        <a href="#" class="mt-4 inline-flex items-center font-semibold group">
-          Read More
-          <span class="ml-2 transform group-hover:translate-x-1 transition">→</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="flex flex-col bg-white transition-colors duration-300 hover:bg-[#b22222] hover:text-white">
-      <img src="https://picsum.photos/600/400?random=3" alt="Project 3" class="w-full h-56 object-cover">
-      <div class="p-6 flex flex-col flex-grow">
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="px-3 py-1 text-xs font-semibold bg-gray-200 rounded-full transition-colors duration-300 hover:bg-white hover:text-black">
-            Bridges & Structures
-          </span>
-          <span class="px-3 py-1 text-xs font-semibold bg-gray-200 rounded-full transition-colors duration-300 hover:bg-white hover:text-black">
-            Grading & Utilities
-          </span>
-        </div>
-        <h3 class="text-xl font-bold mb-2">Cobb County’s South Barrett Reliever Project Phase 3</h3>
-        <p class="text-sm flex-grow">Located in the rapidly developing Town Center area of Kennesaw, Georgia, the South Barrett Reliever Project represents...</p>
-        <a href="#" class="mt-4 inline-flex items-center font-semibold group">
-          Read More
-          <span class="ml-2 transform group-hover:translate-x-1 transition">→</span>
-        </a>
-      </div>
-    </div>
-      <div class="flex flex-col bg-white transition-colors duration-300 hover:bg-[#b22222] hover:text-white">
-      <img src="https://picsum.photos/600/400?random=1" alt="Project 1" class="w-full h-56 object-cover">
-      <div class="p-6 flex flex-col flex-grow">
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="px-3 py-1 text-xs font-semibold bg-gray-200 rounded-full transition-colors duration-300 hover:bg-white hover:text-black">
-            Asphalt Paving & Construction
-          </span>
-          <span class="px-3 py-1 text-xs font-semibold bg-gray-200 rounded-full transition-colors duration-300 hover:bg-white hover:text-black">
-            Bridges & Structures
-          </span>
-        </div>
-        <h3 class="text-xl font-bold mb-2">State Route 42 – North Henry Boulevard Widening Project</h3>
-        <p class="text-sm flex-grow">State Route 42, known locally as North Henry Boulevard, serves as a crucial transportation artery in the southern suburbs...</p>
-        <a href="#" class="mt-4 inline-flex items-center font-semibold group">
-          Read More
-          <span class="ml-2 transform group-hover:translate-x-1 transition">→</span>
-        </a>
-      </div>
-    </div>
-  <div class="flex flex-col bg-white transition-colors duration-300 hover:bg-[#b22222] hover:text-white">
-      <img src="https://picsum.photos/600/400?random=1" alt="Project 1" class="w-full h-56 object-cover">
-      <div class="p-6 flex flex-col flex-grow">
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="px-3 py-1 text-xs font-semibold bg-gray-200 rounded-full transition-colors duration-300 hover:bg-white hover:text-black">
-            Asphalt Paving & Construction
-          </span>
-          <span class="px-3 py-1 text-xs font-semibold bg-gray-200 rounded-full transition-colors duration-300 hover:bg-white hover:text-black">
-            Bridges & Structures
-          </span>
-        </div>
-        <h3 class="text-xl font-bold mb-2">State Route 42 – North Henry Boulevard Widening Project</h3>
-        <p class="text-sm flex-grow">State Route 42, known locally as North Henry Boulevard, serves as a crucial transportation artery in the southern suburbs...</p>
-        <a href="#" class="mt-4 inline-flex items-center font-semibold group">
-          Read More
-          <span class="ml-2 transform group-hover:translate-x-1 transition">→</span>
-        </a>
-      </div>
-    </div>
-
-
-  </div>
-</section>
-<section 
-  class="relative bg-[#b22222] text-white"
-  style="background: url('assets/img/prefooter.png') no-repeat right bottom; background-size: contain;">
-  <div class="max-w-7xl mx-auto px-6 py-16 text-center">
-    <h2 class="text-3xl text-black font-bold mb-4">Ready to work together?</h2>
-    <p class="text-lg mb-8 text-black/90">
-      Whether you have a project in mind and you’re looking for a reliable partner 
-      or you’re looking to take the next step in your career, we want to hear from you!
-    </p>
-    <div class="flex justify-center gap-4">
-      <a href="#"
-         class="bg-black text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-black transition">
-        Build a Project with Us
-      </a>
-      <a href="#"
-         class="border text-[#b22222] border-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-[#b22222] transition">
-        Build a Career with Us
-      </a>
-    </div>
-  </div>
-
-  <!-- Subscription Bar -->
-  <div class="bg-black text-white py-6 px-6">
-    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-      <div>
-        <h3 class="font-bold text-lg">Get our insights delivered straight to your inbox!</h3>
-        <p class="text-sm text-white/80">
-          Subscribe now to get the latest information about trends, innovations and best practices.
+    </section>
+    <section class="relative w-full bg-[#111] mt-36 py-28 overflow-hidden">
+      <div class="text-center mb-20">
+        <h2
+          class="text-5xl md:text-6xl font-extrabold tracking-wide text-white"
+        >
+          OUR STORY
+        </h2>
+        <p class="mt-8 max-w-4xl mx-auto text-gray-300 text-lg">
+          Our journey began decades ago, and each milestone shaped the company
+          we are today.
         </p>
       </div>
-      <form class="flex gap-2 w-full md:w-auto">
-        <input type="email" placeholder="Enter your email"
-               class="px-4 py-2 rounded-md text-black flex-grow md:w-72" />
-        <button type="submit"
-                class="bg-[#b22222] text-white px-5 py-2 rounded-md font-semibold hover:bg-white hover:text-black transition">
-          Subscribe
+
+      <!-- Slider Wrapper -->
+      <div class="relative max-w-[1600px] mx-auto px-6">
+        <!-- Slides Container -->
+        <div
+          id="story-slider"
+          class="flex items-center justify-center gap-12 transition-transform duration-500"
+        >
+          <!-- Cards -->
+          <div
+            class="story-card relative bg-black rounded-2xl overflow-hidden flex-shrink-0 w-[22rem] h-[22rem] transform transition-all duration-500"
+          >
+            <img
+              src="assets/img/story-1.jpg"
+              class="w-full h-full object-cover opacity-70"
+            />
+            <div
+              class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/80 to-transparent"
+            >
+              <h3 class="text-3xl font-bold">1900</h3>
+              <p class="text-base text-gray-300">
+                Our first project sets the foundation.
+              </p>
+            </div>
+          </div>
+          <div
+            class="story-card relative bg-black rounded-2xl overflow-hidden flex-shrink-0 w-[22rem] h-[22rem] transform transition-all duration-500"
+          >
+            <img
+              src="assets/img/story-2.jpg"
+              class="w-full h-full object-cover opacity-70"
+            />
+            <div
+              class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/80 to-transparent"
+            >
+              <h3 class="text-3xl font-bold">1924</h3>
+              <p class="text-base text-gray-300">
+                Awarded our first $1M contract.
+              </p>
+            </div>
+          </div>
+          <div
+            class="story-card relative bg-black rounded-2xl overflow-hidden flex-shrink-0 w-[22rem] h-[22rem] transform transition-all duration-500"
+          >
+            <img
+              src="assets/img/story-3.jpg"
+              class="w-full h-full object-cover opacity-70"
+            />
+            <div
+              class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/80 to-transparent"
+            >
+              <h3 class="text-3xl font-bold">1931</h3>
+              <p class="text-base text-gray-300">
+                Leadership change fuels growth.
+              </p>
+            </div>
+          </div>
+          <div
+            class="story-card relative bg-black rounded-2xl overflow-hidden flex-shrink-0 w-[22rem] h-[22rem] transform transition-all duration-500"
+          >
+            <img
+              src="assets/img/story-4.jpg"
+              class="w-full h-full object-cover opacity-70"
+            />
+            <div
+              class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/80 to-transparent"
+            >
+              <h3 class="text-3xl font-bold">1950</h3>
+              <p class="text-base text-gray-300">Global expansion begins.</p>
+            </div>
+          </div>
+          <div
+            class="story-card relative bg-black rounded-2xl overflow-hidden flex-shrink-0 w-[22rem] h-[22rem] transform transition-all duration-500"
+          >
+            <img
+              src="assets/img/story-1.jpg"
+              class="w-full h-full object-cover opacity-70"
+            />
+            <div
+              class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/80 to-transparent"
+            >
+              <h3 class="text-3xl font-bold">1965</h3>
+              <p class="text-base text-gray-300">
+                Entered new industries with innovation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arrows -->
+        <button
+          id="prev"
+          class="absolute top-1/2 left-6 transform -translate-y-1/2 bg-[#b22222] p-6 rounded-full text-4xl text-white font-bold shadow-2xl hover:bg-red-700"
+        >
+          &#10094;
         </button>
-      </form>
-    </div>
-  </div>
-</section>
-<footer 
-  class="relative text-white"
-  style="background: url('assets/img/footer-background.png');">
-  
-  <div class="bg-black/70">
-    <div class="max-w-7xl mx-auto px-6 py-16">
-      
-      <!-- Top heading + buttons -->
-      <div class="flex flex-col md:flex-row items-center justify-between mb-10">
-        <h2 class="text-3xl font-bold uppercase tracking-wide mb-6 md:mb-0">
-          We're Building Your Future
+        <button
+          id="next"
+          class="absolute top-1/2 right-6 transform -translate-y-1/2 bg-[#b22222] p-6 rounded-full text-4xl text-white font-bold shadow-2xl hover:bg-red-700"
+        >
+          &#10095;
+        </button>
+      </div>
+    </section>
+
+    <section class="bg-gray-100 py-12 text-black">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+        <h2
+          class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-black leading-tight mb-10"
+        >
+          Our Projects
         </h2>
-        <div class="flex gap-4">
-          <a href="#contact" class="px-6 py-2 rounded-full border-2 border-white text-white font-semibold hover:bg-white hover:text-black transition">
-            Contact Us
+        <!-- Card 1 -->
+        <div
+          class="flex flex-col bg-white transition-colors duration-300 hover:bg-[#b22222] hover:text-white"
+        >
+          <img
+            src="https://picsum.photos/600/400?random=1"
+            alt="Project 1"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="px-3 py-1 text-xs font-semibold bg-gray-200 rounded-full transition-colors duration-300 hover:bg-white hover:text-black"
+              >
+                Asphalt Paving & Construction
+              </span>
+              <span
+                class="px-3 py-1 text-xs font-semibold bg-gray-200 rounded-full transition-colors duration-300 hover:bg-white hover:text-black"
+              >
+                Bridges & Structures
+              </span>
+            </div>
+            <h3 class="text-xl font-bold mb-2">
+              State Route 42 – North Henry Boulevard Widening Project
+            </h3>
+            <p class="text-sm flex-grow">
+              State Route 42, known locally as North Henry Boulevard, serves as
+              a crucial transportation artery in the southern suburbs...
+            </p>
+            <a
+              href="#"
+              class="mt-4 inline-flex items-center font-semibold group"
+            >
+              Read More
+              <span class="ml-2 transform group-hover:translate-x-1 transition"
+                >→</span
+              >
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="flex flex-col bg-white transition-colors duration-300 hover:bg-[#b22222] hover:text-white"
+        >
+          <img
+            src="https://picsum.photos/600/400?random=2"
+            alt="Project 2"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="px-3 py-1 text-xs font-semibold bg-gray-200 rounded-full transition-colors duration-300 hover:bg-white hover:text-black"
+              >
+                Asphalt Paving & Construction
+              </span>
+              <span
+                class="px-3 py-1 text-xs font-semibold bg-gray-200 rounded-full transition-colors duration-300 hover:bg-white hover:text-black"
+              >
+                Grading & Utilities
+              </span>
+            </div>
+            <h3 class="text-xl font-bold mb-2">
+              Polk County Airport/Cornelius Moore Field (4A4) Project
+            </h3>
+            <p class="text-sm flex-grow">
+              Polk County Airport (4A4), officially known as Cornelius Moore
+              Field, has been a cornerstone of Cedartown's infrastructure...
+            </p>
+            <a
+              href="#"
+              class="mt-4 inline-flex items-center font-semibold group"
+            >
+              Read More
+              <span class="ml-2 transform group-hover:translate-x-1 transition"
+                >→</span
+              >
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="flex flex-col bg-white transition-colors duration-300 hover:bg-[#b22222] hover:text-white"
+        >
+          <img
+            src="https://picsum.photos/600/400?random=3"
+            alt="Project 3"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="px-3 py-1 text-xs font-semibold bg-gray-200 rounded-full transition-colors duration-300 hover:bg-white hover:text-black"
+              >
+                Bridges & Structures
+              </span>
+              <span
+                class="px-3 py-1 text-xs font-semibold bg-gray-200 rounded-full transition-colors duration-300 hover:bg-white hover:text-black"
+              >
+                Grading & Utilities
+              </span>
+            </div>
+            <h3 class="text-xl font-bold mb-2">
+              Cobb County’s South Barrett Reliever Project Phase 3
+            </h3>
+            <p class="text-sm flex-grow">
+              Located in the rapidly developing Town Center area of Kennesaw,
+              Georgia, the South Barrett Reliever Project represents...
+            </p>
+            <a
+              href="#"
+              class="mt-4 inline-flex items-center font-semibold group"
+            >
+              Read More
+              <span class="ml-2 transform group-hover:translate-x-1 transition"
+                >→</span
+              >
+            </a>
+          </div>
+        </div>
+        <div
+          class="flex flex-col bg-white transition-colors duration-300 hover:bg-[#b22222] hover:text-white"
+        >
+          <img
+            src="https://picsum.photos/600/400?random=1"
+            alt="Project 1"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="px-3 py-1 text-xs font-semibold bg-gray-200 rounded-full transition-colors duration-300 hover:bg-white hover:text-black"
+              >
+                Asphalt Paving & Construction
+              </span>
+              <span
+                class="px-3 py-1 text-xs font-semibold bg-gray-200 rounded-full transition-colors duration-300 hover:bg-white hover:text-black"
+              >
+                Bridges & Structures
+              </span>
+            </div>
+            <h3 class="text-xl font-bold mb-2">
+              State Route 42 – North Henry Boulevard Widening Project
+            </h3>
+            <p class="text-sm flex-grow">
+              State Route 42, known locally as North Henry Boulevard, serves as
+              a crucial transportation artery in the southern suburbs...
+            </p>
+            <a
+              href="#"
+              class="mt-4 inline-flex items-center font-semibold group"
+            >
+              Read More
+              <span class="ml-2 transform group-hover:translate-x-1 transition"
+                >→</span
+              >
+            </a>
+          </div>
+        </div>
+        <div
+          class="flex flex-col bg-white transition-colors duration-300 hover:bg-[#b22222] hover:text-white"
+        >
+          <img
+            src="https://picsum.photos/600/400?random=1"
+            alt="Project 1"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="px-3 py-1 text-xs font-semibold bg-gray-200 rounded-full transition-colors duration-300 hover:bg-white hover:text-black"
+              >
+                Asphalt Paving & Construction
+              </span>
+              <span
+                class="px-3 py-1 text-xs font-semibold bg-gray-200 rounded-full transition-colors duration-300 hover:bg-white hover:text-black"
+              >
+                Bridges & Structures
+              </span>
+            </div>
+            <h3 class="text-xl font-bold mb-2">
+              State Route 42 – North Henry Boulevard Widening Project
+            </h3>
+            <p class="text-sm flex-grow">
+              State Route 42, known locally as North Henry Boulevard, serves as
+              a crucial transportation artery in the southern suburbs...
+            </p>
+            <a
+              href="#"
+              class="mt-4 inline-flex items-center font-semibold group"
+            >
+              Read More
+              <span class="ml-2 transform group-hover:translate-x-1 transition"
+                >→</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="relative bg-[#b22222] text-white"
+      style="
+        background: url('assets/img/prefooter.png') no-repeat right bottom;
+        background-size: contain;
+      "
+    >
+      <div class="max-w-7xl mx-auto px-6 py-16 text-center">
+        <h2 class="text-3xl text-black font-bold mb-4">
+          Ready to work together?
+        </h2>
+        <p class="text-lg mb-8 text-black/90">
+          Whether you have a project in mind and you’re looking for a reliable
+          partner or you’re looking to take the next step in your career, we
+          want to hear from you!
+        </p>
+        <div class="flex justify-center gap-4">
+          <a
+            href="#"
+            class="bg-black text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-black transition"
+          >
+            Build a Project with Us
           </a>
-          <a href="#join" class="px-6 py-2 rounded-full bg-[#b22222] text-white font-semibold hover:bg-white hover:text-black transition">
-            Join Our Team
+          <a
+            href="#"
+            class="border text-[#b22222] border-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-[#b22222] transition"
+          >
+            Build a Career with Us
           </a>
         </div>
       </div>
 
-      <hr class="border-white/40 mb-10" />
-
-      <!-- Footer content -->
-      <div class="flex flex-col md:flex-row md:justify-between gap-8">
-        
-        <!-- Left side -->
-        <div class="md:w-1/3">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="bg-[#b22222] w-12 h-12 flex items-center justify-center rounded-full font-bold">
-              ABC
-            </div>
-            <span class="font-bold text-xl">ABC CONSTRUCTION</span>
+      <!-- Subscription Bar -->
+      <div class="bg-black text-white py-6 px-6">
+        <div
+          class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4"
+        >
+          <div>
+            <h3 class="font-bold text-lg">
+              Get our insights delivered straight to your inbox!
+            </h3>
+            <p class="text-sm text-white/80">
+              Subscribe now to get the latest information about trends,
+              innovations and best practices.
+            </p>
           </div>
-          <p class="text-sm leading-relaxed">
-            1234 Main Street <br/>
-            Your City, ST 00000
-          </p>
+          <form class="flex gap-2 w-full md:w-auto">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="px-4 py-2 rounded-md text-black flex-grow md:w-72"
+            />
+            <button
+              type="submit"
+              class="bg-[#b22222] text-white px-5 py-2 rounded-md font-semibold hover:bg-white hover:text-black transition"
+            >
+              Subscribe
+            </button>
+          </form>
         </div>
+      </div>
+    </section>
+    <footer
+      class="relative text-white"
+      style="background: url('assets/img/footer-background.png')"
+    >
+      <div class="bg-black/70">
+        <div class="max-w-7xl mx-auto px-6 py-16">
+          <!-- Top heading + buttons -->
+          <div
+            class="flex flex-col md:flex-row items-center justify-between mb-10"
+          >
+            <h2 class="text-3xl font-bold uppercase tracking-wide mb-6 md:mb-0">
+              We're Building Your Future
+            </h2>
+            <div class="flex gap-4">
+              <a
+                href="#contact"
+                class="px-6 py-2 rounded-full border-2 border-white text-white font-semibold hover:bg-white hover:text-black transition"
+              >
+                Contact Us
+              </a>
+              <a
+                href="#join"
+                class="px-6 py-2 rounded-full bg-[#b22222] text-white font-semibold hover:bg-white hover:text-black transition"
+              >
+                Join Our Team
+              </a>
+            </div>
+          </div>
 
-        <!-- Navigation Links -->
-        <div class="flex flex-wrap gap-6 md:gap-10 text-sm font-semibold">
-          <a href="#" class="hover:text-[#b22222]">Home</a>
-          <a href="about.html" class="hover:text-[#b22222]">About</a>
-          <a href="#" class="hover:text-[#b22222]">Contact</a>
-          <a href="#" class="hover:text-[#b22222]">Services</a>
-          <a href="#" class="hover:text-[#b22222]">Projects</a>
-        </div>
+          <hr class="border-white/40 mb-10" />
 
-        <!-- Social Icons (all consistent SVGs) -->
-        <div class="flex gap-4">
-          <!-- LinkedIn -->
-          <a href="#" aria-label="LinkedIn" class="hover:text-[#b22222]">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-              <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 
+          <!-- Footer content -->
+          <div class="flex flex-col md:flex-row md:justify-between gap-8">
+            <!-- Left side -->
+            <div class="md:w-1/3">
+              <div class="flex items-center gap-3 mb-4">
+                <div
+                  class="bg-[#b22222] w-12 h-12 flex items-center justify-center rounded-full font-bold"
+                >
+                  ABC
+                </div>
+                <span class="font-bold text-xl">ABC CONSTRUCTION</span>
+              </div>
+              <p class="text-sm leading-relaxed">
+                1234 Main Street <br />
+                Your City, ST 00000
+              </p>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="flex flex-wrap gap-6 md:gap-10 text-sm font-semibold">
+              <a href="index.html" class="hover:text-[#b22222]">Home</a>
+              <a href="about.html" class="hover:text-[#b22222]">About</a>
+              <a href="#" class="hover:text-[#b22222]">Contact</a>
+              <a href="#" class="hover:text-[#b22222]">Services</a>
+              <a href="projects.html" class="hover:text-[#b22222]">Projects</a>
+            </div>
+
+            <!-- Social Icons (all consistent SVGs) -->
+            <div class="flex gap-4">
+              <!-- LinkedIn -->
+              <a href="#" aria-label="LinkedIn" class="hover:text-[#b22222]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 fill-current"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 
               2.76 2.24 5 5 5h14c2.76 0 
               5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 
               19h-3v-10h3v10zm-1.5-11.29c-.96 
@@ -612,13 +1005,19 @@
               1.75zm13.5 11.29h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 
               0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.88v1.37h.04c.4-.75 
               1.38-1.54 2.84-1.54 3.04 
-              0 3.6 2 3.6 4.6v5.6z"/>
-            </svg>
-          </a>
-          <!-- Facebook -->
-          <a href="#" aria-label="Facebook" class="hover:text-[#b22222]">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-              <path d="M22.675 0h-21.35c-.733 0-1.325.592-1.325 
+              0 3.6 2 3.6 4.6v5.6z"
+                  />
+                </svg>
+              </a>
+              <!-- Facebook -->
+              <a href="#" aria-label="Facebook" class="hover:text-[#b22222]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 fill-current"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M22.675 0h-21.35c-.733 0-1.325.592-1.325 
               1.325v21.351c0 .732.592 
               1.324 1.325 
               1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.672c0-3.1 
@@ -627,13 +1026,19 @@
               2.795.143v3.24h-1.918c-1.504 
               0-1.796.715-1.796 1.763v2.314h3.587l-.467 
               3.622h-3.12v9.294h6.116c.73 
-              0 1.322-.592 1.322-1.324v-21.351c0-.733-.592-1.325-1.325-1.325z"/>
-            </svg>
-          </a>
-          <!-- Instagram -->
-          <a href="#" aria-label="Instagram" class="hover:text-[#b22222]">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-              <path d="M12 2.163c3.204 0 3.584.012 
+              0 1.322-.592 1.322-1.324v-21.351c0-.733-.592-1.325-1.325-1.325z"
+                  />
+                </svg>
+              </a>
+              <!-- Instagram -->
+              <a href="#" aria-label="Instagram" class="hover:text-[#b22222]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 fill-current"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 
               4.85.07 1.366.062 2.633.334 
               3.608 1.31.975.975 1.247 2.242 
               1.31 3.608.058 1.266.069 
@@ -655,18 +1060,26 @@
               4.947.072s3.67-.013 
               4.947-.072c1.636-.075 3.09-.353 
               4.23-1.493 1.14-1.14 1.418-2.594 
-              1.493-4.23.059-1.277.072-1.688.072-4.947s-.013-3.67-.072-4.947c-.075-1.636-.353-3.09-1.493-4.23-1.14-1.14-2.594-1.418-4.23-1.493-1.277-.059-1.688-.072-4.947-.072z"/>
-              <path d="M12 5.838a6.162 6.162 0 1 0 0 
+              1.493-4.23.059-1.277.072-1.688.072-4.947s-.013-3.67-.072-4.947c-.075-1.636-.353-3.09-1.493-4.23-1.14-1.14-2.594-1.418-4.23-1.493-1.277-.059-1.688-.072-4.947-.072z"
+                  />
+                  <path
+                    d="M12 5.838a6.162 6.162 0 1 0 0 
               12.324 6.162 6.162 0 0 0 0-12.324zm0 
               10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 
-              0 0 1 0 7.998z"/>
-              <circle cx="18.406" cy="5.594" r="1.44"/>
-            </svg>
-          </a>
-          <!-- Twitter -->
-          <a href="#" aria-label="Twitter" class="hover:text-[#b22222]">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-              <path d="M24 4.557a9.83 9.83 0 0 
+              0 0 1 0 7.998z"
+                  />
+                  <circle cx="18.406" cy="5.594" r="1.44" />
+                </svg>
+              </a>
+              <!-- Twitter -->
+              <a href="#" aria-label="Twitter" class="hover:text-[#b22222]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 fill-current"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M24 4.557a9.83 9.83 0 0 
               1-2.828.775 4.932 4.932 0 0 0 
               2.165-2.724 9.864 9.864 0 0 
               1-3.127 1.195 4.916 4.916 0 0 
@@ -681,13 +1094,19 @@
               13.945 0 0 0 7.557 2.213c9.054 
               0 14-7.496 14-13.986 
               0-.213-.005-.425-.014-.636a9.935 
-              9.935 0 0 0 2.457-2.548z"/>
-            </svg>
-          </a>
-          <!-- YouTube -->
-          <a href="#" aria-label="YouTube" class="hover:text-[#b22222]">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-              <path d="M23.498 6.186a2.974 2.974 0 0 
+              9.935 0 0 0 2.457-2.548z"
+                  />
+                </svg>
+              </a>
+              <!-- YouTube -->
+              <a href="#" aria-label="YouTube" class="hover:text-[#b22222]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 fill-current"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M23.498 6.186a2.974 2.974 0 0 
               0-2.093-2.103c-1.852-.5-9.305-.5-9.305-.5s-7.452 
               0-9.304.5a2.974 2.974 0 0 0-2.093 
               2.103c-.5 1.853-.5 5.714-.5 
@@ -695,106 +1114,112 @@
               0 0 0 2.093 2.103c1.852.5 9.304.5 
               9.304.5s7.453 0 9.305-.5a2.974 
               2.974 0 0 0 2.093-2.103c.5-1.853.5-5.714.5-5.714s0-3.861-.5-5.714zM9.546 
-              15.568v-7.136l6.364 3.568-6.364 3.568z"/>
-            </svg>
-          </a>
+              15.568v-7.136l6.364 3.568-6.364 3.568z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Bottom bar -->
+          <div
+            class="flex flex-col md:flex-row justify-between items-center mt-10 text-xs text-white/70 gap-4"
+          >
+            <div>© 2025 ABC CONSTRUCTION. All rights reserved.</div>
+            <div class="flex gap-4">
+              <a href="#" class="hover:text-white">Terms</a>
+              <a href="#" class="hover:text-white">Privacy Policy</a>
+            </div>
+          </div>
         </div>
       </div>
+    </footer>
 
-      <!-- Bottom bar -->
-      <div class="flex flex-col md:flex-row justify-between items-center mt-10 text-xs text-white/70 gap-4">
-        <div>© 2025 ABC CONSTRUCTION. All rights reserved.</div>
-        <div class="flex gap-4">
-          <a href="#" class="hover:text-white">Terms</a>
-          <a href="#" class="hover:text-white">Privacy Policy</a>
-        </div>
-      </div>
+    <!-- AOS SCRIPT -->
+    <script src="./assets/js/tabs.js"></script>
+    <script src="./assets/js/storyslider.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    </div>
-  </div>
-</footer>
+    <script>
+      AOS.init({
+        duration: 1400,
+        easing: "ease-in-out",
+        once: true,
+      });
 
-  <!-- AOS SCRIPT -->
-   <script src="./assets/js/tabs.js"></script>
-   <script src="./assets/js/storyslider.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  
-  <script>
-    AOS.init({
-      duration: 1400,
-      easing: 'ease-in-out',
-      once: true,
-    });
+      gsap.registerPlugin(ScrollTrigger);
 
-     gsap.registerPlugin(ScrollTrigger);
+      // Pin hero and reveal second section
+      ScrollTrigger.create({
+        trigger: "section:nth-of-type(1)", // hero
+        start: "top top",
+        end: "bottom top",
+        pin: true, // keeps hero fixed while scrolling
+        pinSpacing: false, // removes the fake space
+        scrub: true,
+      });
 
-  // Pin hero and reveal second section
-  ScrollTrigger.create({
-    trigger: "section:nth-of-type(1)", // hero
-    start: "top top",
-    end: "bottom top",
-    pin: true, // keeps hero fixed while scrolling
-    pinSpacing: false, // removes the fake space
-    scrub: true
-  });
+      // Optional: fade hero text while revealing second section
+      gsap.to("section:nth-of-type(1) h1", {
+        scrollTrigger: {
+          trigger: "section:nth-of-type(2)",
+          start: "top bottom",
+          end: "top top",
+          scrub: true,
+        },
+        opacity: 0,
+        y: -100,
+      });
+      gsap.to("#heroVideo", {
+        delay: 1.5, // wait for image to breathe
+        duration: 2.5,
+        ease: "power3.inOut",
+        clipPath: "circle(150% at 100% 100%)", // expand bubble from bottom-right
+      });
 
-  // Optional: fade hero text while revealing second section
-  gsap.to("section:nth-of-type(1) h1", {
-    scrollTrigger: {
-      trigger: "section:nth-of-type(2)",
-      start: "top bottom",
-      end: "top top",
-      scrub: true
-    },
-    opacity: 0,
-    y: -100
-  });
-  gsap.to("#heroVideo", {
-  delay: 1.5, // wait for image to breathe
-  duration: 2.5,
-  ease: "power3.inOut",
-  clipPath: "circle(150% at 100% 100%)" // expand bubble from bottom-right
-});
+      gsap.set(".hero-line", {
+        yPercent: 100,
+        opacity: 0,
+      });
 
-  gsap.set(".hero-line", { 
-    yPercent: 100, 
-    opacity: 0 
-  });
+      gsap.to(".hero-line", {
+        yPercent: 0,
+        opacity: 1,
+        duration: 1.4,
+        ease: "power4.out",
+        stagger: 0.3, // one line after another
+        delay: 0.5, // thoda suspense
+      });
 
-  gsap.to(".hero-line", {
-    yPercent: 0,
-    opacity: 1,
-    duration: 1.4,
-    ease: "power4.out",
-    stagger: 0.3, // one line after another
-    delay: 0.5 // thoda suspense
-  });
+      gsap.set("#motionHeading .motion-line", { yPercent: 120, opacity: 0 });
 
-  gsap.set("#motionHeading .motion-line", { yPercent: 120, opacity: 0 });
+      gsap.to("#motionHeading .motion-line", {
+        yPercent: 0,
+        opacity: 1,
+        duration: 1.4,
+        ease: "power4.out",
+        stagger: 0.25,
+        scrollTrigger: {
+          trigger: "#motionHeading",
+          start: "top 85%", // jab thoda viewport me aaye
+          toggleActions: "play none none reverse",
+        },
+      });
 
-  gsap.to("#motionHeading .motion-line", {
-    yPercent: 0,
-    opacity: 1,
-    duration: 1.4,
-    ease: "power4.out",
-    stagger: 0.25,
-    scrollTrigger: {
-      trigger: "#motionHeading",
-      start: "top 85%",  // jab thoda viewport me aaye
-      toggleActions: "play none none reverse"
-    }
-  });
-
-  // Optional dramatic underline sweep
-  gsap.fromTo("#motionHeading", 
-    { clipPath: "inset(0 100% 0 0)" }, 
-    { clipPath: "inset(0 0% 0 0)", duration: 1.2, ease: "power2.out",
-      scrollTrigger: {
-        trigger: "#motionHeading",
-        start: "top 85%"
-      }
-    }
-  );
-  </script>
-</body>
+      // Optional dramatic underline sweep
+      gsap.fromTo(
+        "#motionHeading",
+        { clipPath: "inset(0 100% 0 0)" },
+        {
+          clipPath: "inset(0 0% 0 0)",
+          duration: 1.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: "#motionHeading",
+            start: "top 85%",
+          },
+        }
+      );
+    </script>
+  </body>
 </html>
