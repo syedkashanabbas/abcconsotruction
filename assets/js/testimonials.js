@@ -1,27 +1,44 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const slides = document.querySelectorAll(".testimonial-slide");
-  const dots = document.querySelectorAll(".dot");
-  let current = 0;
+// testimonial.js
+(function () {
+  function init(containerSel) {
+    const root = typeof containerSel === "string" ? document.querySelector(containerSel) : containerSel;
+    if (!root) return;
 
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.add("hidden", "opacity-0");
-      slide.classList.remove("opacity-100");
-      dots[i].classList.remove("active-dot");
+    const slides = Array.from(root.querySelectorAll(".qt-slide"));
+    const prev = root.querySelector("[data-qt-prev]");
+    const next = root.querySelector("[data-qt-next]");
+    let dotsWrap = root.querySelector("[data-qt-dots]");
+    if (!slides.length || !prev || !next || !dotsWrap) return;
+
+    // build dots from slide count
+    dotsWrap.innerHTML = "";
+    slides.forEach((_, i) => {
+      const dot = document.createElement("span");
+      dot.className = "qtDot w-3 h-3 bg-gray-300 rounded-full inline-block cursor-pointer";
+      dot.addEventListener("click", () => { current = i; update(); });
+      dotsWrap.appendChild(dot);
     });
 
-    slides[index].classList.remove("hidden");
-    slides[index].classList.remove("opacity-0");
-    slides[index].classList.add("opacity-100");
-    dots[index].classList.add("active-dot");
+    const dots = Array.from(dotsWrap.querySelectorAll(".qtDot"));
+    let current = 0;
+
+    function update() {
+      slides.forEach((s, i) => s.classList.toggle("hidden", i !== current));
+      dots.forEach((d, i) => {
+        d.classList.toggle("bg-black", i === current);
+        d.classList.toggle("bg-gray-300", i !== current);
+      });
+    }
+
+    prev.addEventListener("click", () => { current = (current - 1 + slides.length) % slides.length; update(); });
+    next.addEventListener("click", () => { current = (current + 1) % slides.length; update(); });
+
+    update();
   }
 
-  // Auto slide every 3s
-  setInterval(() => {
-    current = (current + 1) % slides.length;
-    showSlide(current);
-  }, 3000);
-
-  // Initial
-  showSlide(current);
-});
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", () => init("#qt-testimonials"));
+  } else {
+    init("#qt-testimonials");
+  }
+})();
